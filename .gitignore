@@ -1,0 +1,12 @@
+# IDE
+.idea
+
+# node
+template/node_modules/
+
+# compiled resources
+template/dist/
+template/debug/
+
+# json locale
+template/src/locale/json/

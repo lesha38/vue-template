@@ -1,0 +1,46 @@
+
+
+
+%full-screen {
+  position: absolute;
+
+  @include size(100%);
+  left: 0;
+  top: 0;
+
+  min-width: $mobile-size;
+  overflow: hidden;
+}
+
+%one-line {
+  // NOTE you should also
+  // 1. set "display: block";
+  // 2. set "width" on current element or "overflow: hidden" on parent element;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+%scrollbar {
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 8px;
+    background: rgba(0,0,0,0.15);
+    margin: 0px 0px 0px 0px;
+  }
+  &::-webkit-scrollbar-button:vertical:decrement {
+    background: rgba(0,0,0,0.0);
+    height: 8px;
+  }
+  &::-webkit-scrollbar-button:vertical:increment {
+    background: rgba(0,0,0,0.0);
+    height: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    min-height: 32px;
+    background: #999999;
+    border-radius: 2px;
+    background-clip: content-box;
+  } 
+  -webkit-overflow-scrolling: touch;
+}

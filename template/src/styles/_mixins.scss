@@ -1,0 +1,48 @@
+
+
+
+@mixin size($val) {
+  height: $val;
+  width: $val;
+}
+
+@mixin background($path) {
+  background-image: url($path);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@mixin between-children {
+  &>:not(:last-child) {
+    @content;
+  }
+}
+
+@mixin breakpoint-width($min, $max : 0) {
+  @if ($max == 0) {
+    @media only screen
+    and (min-width: $min) { @content; }
+  } @else {
+    @media only screen
+    and (min-width: $min)
+    and (max-width: $max - 1) { @content; }
+  }
+}
+
+@mixin breakpoint-height($min, $max : 0) {
+  @if ($max == 0) {
+    @media only screen
+    and (min-height: $min) { @content; }
+  } @else {
+    @media only screen
+    and (min-height: $min)
+    and (max-height: $max - 1) { @content; }
+  }
+}
+
+@mixin breakpoint($args...) {
+  @include breakpoint-width($args...) {
+    @content;
+  }
+}

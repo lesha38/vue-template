@@ -1,0 +1,18 @@
+
+
+
+.main-screen {
+  @extend %full-screen;
+
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.main-screen__main {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow: hidden;
+}

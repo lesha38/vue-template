@@ -1,0 +1,25 @@
+// Global
+@import "./variables";
+@import "./mixins";
+@import "./classes";
+
+// Fonts
+@import './fonts/Roboto';
+@import './fonts/Material-Icons';
+
+// Vendors
+@import '~reset-css/sass/_reset.scss';
+
+// Modules
+@import './modules/screen.scss';
+
+body {
+  font-size: 14px;
+  line-height: normal;
+  font-family: $preferred-font;
+  -webkit-tap-highlight-color: transparent;
+}
+
+* {
+  font-family: $preferred-font;
+}
