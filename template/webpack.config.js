@@ -168,7 +168,7 @@ module.exports = (env, argv) => {
             {
               loader: 'sass-loader',
               options: {
-                prependData: `
+                additionalData: `
                   @import "~styles/variables";
                   @import "~styles/mixins";
                   @import "~styles/classes";
